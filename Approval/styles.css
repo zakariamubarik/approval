@@ -1,0 +1,177 @@
+/* styles rules for navigation */
+.logo {
+  display: flex;
+  align-items: center;
+  width: 175px;
+  height: auto;
+}
+#navbar {
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #effaff;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+}
+#navbar .navbar-inner {
+  display: flex;
+  justify-content: space-between;
+}
+#navbar .navbar-inner .hamburger {
+  display: none;
+}
+#navbar .navbar-inner .links {
+  display: flex;
+}
+#navbar .navbar-inner .links li {
+  padding: 1.5rem 1.5rem;
+}
+#navbar .navbar-inner .links li:last-child {
+  padding: 0.75rem 1.5rem;
+}
+#navbar .navbar-inner .links li a {
+  font-weight: 800;
+  color: #1f333b;
+  text-transform: uppercase;
+}
+
+/* styles rules  for banner section */
+#hero {
+  position: relative;
+  background: #24527e;
+  color: #effaff;
+  height: 80vh;
+  z-index: 1;
+}
+#hero::before {
+  transform-origin: right bottom;
+  box-shadow: 0 8px 6px -2px rgba(0, 0, 0, 0.25);
+}
+#hero .hero-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: inherit;
+  align-items: center;
+}
+
+/* styles rules  for about section */
+#about {
+  z-index: -1;
+  background: #f3eff5;
+  color: #1f333b;
+  height: auto;
+}
+#about .about-inner .about-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+}
+#about .about-inner .about-grid .about-left {
+  padding: 2rem;
+}
+
+/* styles rules for inventory section */
+
+#inventory {
+  background: #f3eff5;
+  color: #1f333b;
+  height: auto;
+  padding-bottom: 8rem;
+}
+#inventory .inventory-inner .col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+#inventory .inventory-inner .col-4 .box {
+  color: #1f333b;
+  background: #effaff;
+  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 25vw;
+}
+#inventory .inventory-inner .col-4 .box:hover {
+  transform: scale(1.03);
+}
+#inventory .inventory-inner .col-4 .box .vehicle {
+  background: #24527e;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem;
+}
+#inventory .inventory-inner .col-4 .box .vehicle img {
+  max-width: 100px;
+  height: auto;
+}
+#inventory .inventory-inner .col-4 .box .description {
+  display: grid;
+  grid-template-rows: fit-content(4rem) 11rem 1fr;
+  row-gap: 1rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+/* styles rules for contact section */
+#contact {
+  background: #24527e;
+  color: #effaff;
+  height: 70vh;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero::before,
+#contact::before {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  transform: skewY(-3deg);
+}
+#contact::before {
+  box-shadow: 0 -8px 6px -2px rgba(0, 0, 0, 0.25);
+  transform-origin: top left;
+}
+#contact .contact-inner .col-2 .col-left form .contact-email .email-input,
+#contact .contact-inner .col-2 .col-left form .contact-name .name-input,
+#contact .contact-inner .col-2 .col-left form .contact-text .message-input {
+  border-radius: 3px;
+  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem;
+  font-size: inherit;
+  width: 100%;
+  transition: 0.5s;
+  outline: none;
+}
+#contact .contact-inner .col-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+}
+#contact .contact-inner .col-2 .col-left form {
+  display: grid;
+  grid-template-areas: "email name" "message message";
+  grid-gap: 1rem;
+}
+#contact .contact-inner .col-2 .col-left form .contact-email {
+  grid-area: email;
+}
+
+/* styles  riles for the footer */
+footer {
+  height: auto;
+  background: #effaff;
+}
+
+footer .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
